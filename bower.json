@@ -1,0 +1,19 @@
+{
+  "name": "purescript",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-eff": "^3.2.1",
+    "purescript-strings": "^3.5.0",
+    "purescript-console": "3.0.0",
+    "purescript-node-readline": "3.0.1",
+    "purescript-integers": "3.2.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "3.0.0"
+  }
+}

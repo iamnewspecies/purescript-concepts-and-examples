@@ -1,0 +1,1 @@
+Equivalent of https://github.com/sdiehl/write-you-a-haskell for purescript.
