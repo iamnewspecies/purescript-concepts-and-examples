@@ -185,9 +185,6 @@ newtype Parser a = Parser { parse :: FString -> Array (Tuple a FString) }
 -- -- run :: String -> Expr
 -- -- run s = runParser  $ toCharArray s
 
-
--- -- how does forever work?
-
 main :: forall e. Eff (exception :: EXCEPTION, readline :: READLINE, console :: CONSOLE| e) Unit
 main = do
   interface <- createConsoleInterface noCompletion
