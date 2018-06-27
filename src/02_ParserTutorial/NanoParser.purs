@@ -14,6 +14,8 @@ import Text.Parsing.StringParser.Combinators (many1, endBy1, sepBy1, optionMaybe
 import Text.Parsing.StringParser.Expr (Assoc(..), Operator(..), buildExprParser)
 import Text.Parsing.StringParser.String (anyDigit, eof, string, anyChar, regex)
 
+-- TODO :: Need to implement all the details of paser here. As we wanted to do this to understand the parser
+
 digit :: Parser Int
 digit = string "0" $> 0
     <|> string "1" $> 1
@@ -45,7 +47,7 @@ main = do
     if s == "quit"
         then close interface
       else do
-        _ <- log $ show $ expectResult exprTest "1*2+3/4-5"
+        _ <- log $ show $ expectResult exprTest s
         prompt interface
 
 
