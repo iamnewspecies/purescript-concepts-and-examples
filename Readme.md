@@ -94,4 +94,4 @@ Up until now we discussed how Haskell was designed. After this we will try to fi
 - Now let us write a simple code and see what happens to it in a purescript compiler and how does it get converted to Javascript code. We will also create the intermidiate ASTs after each compiler iteration and reference to what part of the code is responsible for doing this.
 
 
-# Please refer to the Sorce-JS-Purescript for the rest of the tutorial
+Please refer to the Sorce-JS-Purescript for the rest of the tutorial
