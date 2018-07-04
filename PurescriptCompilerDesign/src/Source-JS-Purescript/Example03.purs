@@ -1,3 +1,3 @@
 module Example.Three where
 
--- A code which shows use of Prim, Prelude.
+-- Code which explains how are infix operators, data types, newtypes are added to the type checker
