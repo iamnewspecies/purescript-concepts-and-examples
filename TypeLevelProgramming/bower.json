@@ -19,6 +19,7 @@
     "purescript-prelude": "^4.1.0",
     "purescript-effect": "^2.0.0",
     "purescript-maybe": "^4.0.0",
-    "purescript-arrays": "^5.0.0"
+    "purescript-arrays": "^5.0.0",
+    "purescript-transformers": "^4.1.0"
   }
 }
