@@ -1,0 +1,34 @@
+{
+  "name": "purescript-control",
+  "homepage": "https://github.com/purescript/purescript-control",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript/purescript-control.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^4.0.0"
+  },
+  "devDependencies": {
+    "purescript-effect": "^2.0.0"
+  },
+  "version": "4.1.0",
+  "_release": "4.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.1.0",
+    "commit": "8af53eea4ecc7b185776a0f144bcd7106ed08eb1"
+  },
+  "_source": "https://github.com/purescript/purescript-control.git",
+  "_target": "^4.0.0",
+  "_originalSource": "purescript-control"
+}

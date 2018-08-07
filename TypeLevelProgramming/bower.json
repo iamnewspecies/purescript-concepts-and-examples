@@ -1,0 +1,24 @@
+{
+  "name": "type-level-programming",
+  "homepage": "https://github.com/iamnewspecies/write-you-a-purescript",
+  "authors": [
+    "newspecies <harsh21592@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^4.1.0",
+    "purescript-effect": "^2.0.0",
+    "purescript-maybe": "^4.0.0",
+    "purescript-arrays": "^5.0.0"
+  }
+}
