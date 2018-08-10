@@ -1,3 +1,5 @@
 module Example.Two where
 
--- A code which shows use of Prim, Prelude.
+
+identity :: String -> String
+identity s = s

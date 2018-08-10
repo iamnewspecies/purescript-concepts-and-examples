@@ -1,10 +1,10 @@
 Equivalent of https://github.com/sdiehl/write-you-a-haskell for purescript.
 
 - Why do we go functional?
-  -- The world is about 
+  -- The world is about  functions
   -- All machines are about some action on some object. 
-  -- If you are still not convinced then read this following book "Wholeness and implicate order" by David Bohm. (You need to read the first three chapters to understand the philosophy of our domain)[0][https://www.amazon.in/Wholeness-Implicate-Order-Routledge-Classics/dp/0415289793/ref=sr_1_2?ie=UTF8&qid=1530621732&sr=8-2&keywords=david+bohm] The idea that this book is trying to talk about is... at least my interpretation in short... There are infinite objects that exist in this world and we need to somehow look at these things in a very unified way otherwise there is an explosion of concepts which is very difficult to keep track of. 
-  You can basically start asking yourself why a screen "sitting" on a table has to be seen differntly as compared to you sitting on a chair. Sure, you would say that doing this reduces the beauty and history of language but I hope that is not what we are trying to acomplish in when we write code. Fundamentally you are tring to transform something into something else with the help of some "process". "_ -> _" -- Anything can come in place of "_". This automatically pushes you to think that almost everything has some similarity. You try to find patterns. So basically funcational way of thinking pushes you to think in this fashion "_ -> _" and all other languages push you into thinking this " very_important __ very_important". You can always argue that other forms of writing code can also accomplish what functional programming langauges accomplish. But it is that one simple way of doing things which generates the most ideal patterns.
+  -- Read the book "Wholeness and implicate order" by David Bohm. (You need to read the first three chapters to understand the philosophy of our domain)[0][https://www.amazon.in/Wholeness-Implicate-Order-Routledge-Classics/dp/0415289793/ref=sr_1_2?ie=UTF8&qid=1530621732&sr=8-2&keywords=david+bohm] The idea that this book is trying to talk about is... There are infinite objects that exist in this world and we need to somehow look at these things in a very unified way otherwise there is an explosion of concepts which is very difficult to keep track of. 
+  You can basically start asking yourself why a screen "sitting" on a table has to be seen differntly as compared to you sitting on a chair. Sure, you would say that doing this reduces the beauty and history of language but I hope that is not what we are trying to acomplish in when we write code. Fundamentally you are tring to transform something into something else with the help of some "function". "_ -> _" -- Anything can come in place of "_". This automatically pushes you to think that almost everything has some similarity. You try to find patterns. So basically funcational way of thinking pushes you to think in this fashion "_ -> _" and all other languages push you into thinking this " very_important __ very_important". You can always argue that other forms of writing code can also accomplish what functional programming langauges accomplish. But it is that one simple way of doing things which generates the most ideal patterns.
 
 --  What is the natural outcome of this philosophy?
   -- If you agree with the philosophy then the obvious outcome is we should focus on functions. We push this philosophy so far that we see the most fundametal thing as some function. This brings into picture lamda calculus.
@@ -25,7 +25,7 @@ Enough philosophy now the concepts.
     -- If t and s are both valid λ-terms, then t s is a valid λ-term.
   
   -- What are the operations that are defined in lamda calculus.
-    -- application (that is all). Which is the tird statement of the above mentioned laws. This operation is left associtive.
+    -- application (that is all). Which is the third statement of the above mentioned laws. This operation is left associtive.
     -- Every lamda function has just one paramter.
     -- (TODO :: Need to add few examples here)
 
@@ -42,7 +42,7 @@ Enough philosophy now the concepts.
 
 -- Lamda calculus is used in optimising code. Dead code optmization happens here. Basic idea is every program can undergo certiain beta reduction and other replacemts and can be reduced to few SKI combinators of lamda calculus and certain part of the code is just eleminated if during simplification. It is very similar to :: 100 * 4 * 8 * 0 = 0 no matter what. So calculation will never happen.
 
-We move one step above lamda calculus which is SYSTEM F programming language which has all the basic constructs required for a programming language. Every program after desugaring expanda into this. Basically all the special costructs that you see in your code which makes your code short and concise are some magic that is done here. Note :: SYSTEM F is a typed language. Types exist even at this stage of this code. The AST at this level just needs a compiler which understands the following things.
+We move one step above lamda calculus which is SYSTEM F programming language which has all the basic constructs required for a programming language. Every program after desugaring expands into this. Basically all the special costructs that you see in your code which makes your code short and concise are some magic that is done here. Note :: SYSTEM F is a typed language. Types exist even at this stage of this code. The AST at this level just needs a compiler which understands the following things.
 
 (TODO :: Need to expalain what are these and why they are used.)
 data Expr

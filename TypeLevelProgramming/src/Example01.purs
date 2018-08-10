@@ -73,3 +73,5 @@ class ApplyRecord (io :: # Type) (i :: # Type) (o :: # Type) | i o -> io, io o -
 instance applyRecordImpl :: ( RowToList io lio, RowToList i li, RowToList o lo, ApplyRowList lio li lo, ListToRow lio io, ListToRow li i, ListToRow lo o ) => ApplyRecord io i o
 
 class ApplyRowList (io :: RowList) (i :: RowList) (o :: RowList) | i o -> io, io o -> i, io i -> o
+
+-- What next?

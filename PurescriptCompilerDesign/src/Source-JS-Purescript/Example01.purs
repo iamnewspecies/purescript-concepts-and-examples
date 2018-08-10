@@ -1,15 +1,38 @@
 module Example.One where
 
+import Example.Two
+
 -- Here we will cover all the basic compiler translaitions.
 
 -- A small code
 
-
 data SomeType = A String | B String
 
 main :: SomeType -> String
-main (A s) = s
-main (B s) = s
+main (A s) = identity s
+main (B s) = identity s
+
+
+main = case sometype of 
+        (A s) -> identity s
+        (B s) -> identity s
+
+someFunction = main (A "5")
+
+foo x s = show x <> s
+
+bar y = y <> foo
+
+
+
+
+
+
+
+-- identify type of main
+-- identify type of case
+-- identify 
+
 -- individual function typecheck happens and then it checks all the cases are considered.
 
 {-

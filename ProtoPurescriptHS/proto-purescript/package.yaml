@@ -29,12 +29,20 @@ executables:
   proto-purescript-exe:
     main:                Main.hs
     source-dirs:         app
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
+    ghc-options: -Wall -O2 -fno-warn-unused-do-bind -threaded -rtsopts -with-rtsopts=-N
+    other-modules:
+      - Version
+      - MainTest
     dependencies:
+    - optparse-applicative >=0.13.0
     - proto-purescript
+    when:
+    - condition: flag(release)
+      then:
+        cpp-options: -DRELEASE
+      else:
+        dependencies:
+        - gitrev >=1.2.0 && <1.4
 
 tests:
   proto-purescript-test:
@@ -46,3 +54,11 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - proto-purescript
+
+flags:
+  release:
+    description: >
+        Mark this build as a release build: prevents inclusion of extra
+        info e.g. commit SHA in --version output)
+    manual: false
+    default: false

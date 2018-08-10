@@ -67,3 +67,5 @@ derive newtype instance monadApp :: Monad App
 derive newtype instance monadEffApp :: MonadEffect (App)
 derive newtype instance monadStateApp :: MonadState Int (App)
 derive newtype instance monadErrorApp :: MonadError String (App)
+
+-- What next?

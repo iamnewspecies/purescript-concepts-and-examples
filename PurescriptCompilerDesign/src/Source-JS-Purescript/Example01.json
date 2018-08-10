@@ -1,0 +1,222 @@
+{
+	"moduleName": ["Example", "One"],
+	"imports": [{
+		"annotation": {
+			"meta": null,
+			"sourceSpan": {
+				"start": [1, 1],
+				"end": [11, 14]
+			}
+		},
+		"moduleName": ["Example", "One"]
+	}, {
+		"annotation": {
+			"meta": null,
+			"sourceSpan": {
+				"start": [1, 1],
+				"end": [11, 14]
+			}
+		},
+		"moduleName": ["Prim"]
+	}],
+	"builtWith": "0.12.0",
+	"modulePath": "./src/Source-JS-Purescript/Example01.purs",
+	"exports": ["A", "B", "main"],
+	"decls": [{
+		"annotation": {
+			"meta": null,
+			"sourceSpan": {
+				"start": [7, 1],
+				"end": [7, 36]
+			}
+		},
+		"identifier": "A",
+		"expression": {
+			"constructorName": "A",
+			"annotation": {
+				"meta": null,
+				"sourceSpan": {
+					"start": [7, 1],
+					"end": [7, 36]
+				}
+			},
+			"typeName": "SomeType",
+			"fieldNames": ["value0"],
+			"type": "Constructor"
+		},
+		"bindType": "NonRec"
+	}, {
+		"annotation": {
+			"meta": null,
+			"sourceSpan": {
+				"start": [7, 1],
+				"end": [7, 36]
+			}
+		},
+		"identifier": "B",
+		"expression": {
+			"constructorName": "B",
+			"annotation": {
+				"meta": null,
+				"sourceSpan": {
+					"start": [7, 1],
+					"end": [7, 36]
+				}
+			},
+			"typeName": "SomeType",
+			"fieldNames": ["value0"],
+			"type": "Constructor"
+		},
+		"bindType": "NonRec"
+	}, {
+		"annotation": {
+			"meta": null,
+			"sourceSpan": {
+				"start": [9, 1],
+				"end": [9, 27]
+			}
+		},
+		"identifier": "main",
+		"expression": {
+			"annotation": {
+				"meta": null,
+				"sourceSpan": {
+					"start": [9, 1],
+					"end": [9, 27]
+				}
+			},
+			"body": {
+				"annotation": {
+					"meta": null,
+					"sourceSpan": {
+						"start": [9, 1],
+						"end": [9, 27]
+					}
+				},
+				"caseExpressions": [{
+					"annotation": {
+						"meta": null,
+						"sourceSpan": {
+							"start": [10, 1],
+							"end": [10, 15]
+						}
+					},
+					"value": {
+						"moduleName": null,
+						"identifier": "v"
+					},
+					"type": "Var"
+				}],
+				"caseAlternatives": [{
+					"binders": [{
+						"constructorName": {
+							"moduleName": ["Example", "One"],
+							"identifier": "A"
+						},
+						"annotation": {
+							"meta": {
+								"metaType": "IsConstructor",
+								"identifiers": ["value0"],
+								"constructorType": "SumType"
+							},
+							"sourceSpan": {
+								"start": [10, 7],
+								"end": [10, 10]
+							}
+						},
+						"typeName": {
+							"moduleName": ["Example", "One"],
+							"identifier": "SomeType"
+						},
+						"binders": [{
+							"annotation": {
+								"meta": null,
+								"sourceSpan": {
+									"start": [10, 9],
+									"end": [10, 10]
+								}
+							},
+							"identifier": "s",
+							"binderType": "VarBinder"
+						}],
+						"binderType": "ConstructorBinder"
+					}],
+					"expression": {
+						"annotation": {
+							"meta": null,
+							"sourceSpan": {
+								"start": [10, 14],
+								"end": [10, 15]
+							}
+						},
+						"value": {
+							"moduleName": null,
+							"identifier": "s"
+						},
+						"type": "Var"
+					},
+					"isGuarded": false
+				}, {
+					"binders": [{
+						"constructorName": {
+							"moduleName": ["Example", "One"],
+							"identifier": "B"
+						},
+						"annotation": {
+							"meta": {
+								"metaType": "IsConstructor",
+								"identifiers": ["value0"],
+								"constructorType": "SumType"
+							},
+							"sourceSpan": {
+								"start": [11, 7],
+								"end": [11, 10]
+							}
+						},
+						"typeName": {
+							"moduleName": ["Example", "One"],
+							"identifier": "SomeType"
+						},
+						"binders": [{
+							"annotation": {
+								"meta": null,
+								"sourceSpan": {
+									"start": [11, 9],
+									"end": [11, 10]
+								}
+							},
+							"identifier": "s",
+							"binderType": "VarBinder"
+						}],
+						"binderType": "ConstructorBinder"
+					}],
+					"expression": {
+						"annotation": {
+							"meta": null,
+							"sourceSpan": {
+								"start": [11, 14],
+								"end": [11, 14]
+							}
+						},
+						"value": {
+							"moduleName": null,
+							"identifier": "s"
+						},
+						"type": "Var"
+					},
+					"isGuarded": false
+				}],
+				"type": "Case"
+			},
+			"argument": "v",
+			"type": "Abs"
+		},
+		"bindType": "NonRec"
+	}],
+	"comments": [],
+	"foreign": [],
+	"sourceSpan": {
+		"start": [1, 1],
+		"end": [11, 14]
+	}
+}

@@ -24,3 +24,5 @@ derive instance ordPersonKey :: Ord PersonKey
 -- How is compiler able to auto generate code?
 -- Can we add more such instances to our compiler?
 -- Where all does the code generation in purescript? Other than the core JS code!
+
+-- What next?
