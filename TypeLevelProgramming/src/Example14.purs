@@ -61,7 +61,7 @@ instance applyRowListInstance :: (
         value = f (get inputp ri)
         ro = build (insert (SProxy :: SProxy k) value) valueRecord 
 
-foo :: {a :: Boolean -> String, b :: Int -> Boolean}
+foo :: Record (a :: Boolean -> String, b :: Int -> Boolean)
 foo = {a: show, b: (_ > 0)}
 
 bar :: {a :: Boolean, b :: Int}

@@ -15,9 +15,6 @@ import Unsafe.Coerce (unsafeCoerce)
 class TypeConverter (i :: # Type) (o :: # Type) where
     to :: Record i -> Record o
 
-class TypeConverterRowList (il :: RowList) rowi (ol :: RowList) rowo where
-    extract :: forall g h. g il -> Record rowi -> h ol -> Record rowo
-
 -- how do I say o is sub set of i. Will type system automatically check that?
 instance recordTypeConverter :: (
         RowToList i il
@@ -31,15 +28,18 @@ instance recordTypeConverter :: (
             ilp = RLProxy :: RLProxy il
             reco = extract ilp reci olp
 
+class TypeConverterRowList (il :: RowList) rowi (ol :: RowList) rowo where
+    extract :: forall g h. g il -> Record rowi -> h ol -> Record rowo
+
 instance nilTypeConverter :: TypeConverterRowList (Cons ki tyi taili) rowi Nil rowo where
-    extract _ reci = unsafeCoerce {}
+    extract _ reci _ = unsafeCoerce {}
 
 instance rowListTypeConverter :: (
         IsSymbol ko
     ,   IsSymbol ki
     ,   TypeConverterRowList (Cons ki tyi taili) rowi tailo whatevero
     ,   Cons ko tyo whatevero rowo
-    ,   Cons ko tyo whateveri rowi
+    ,   Cons ko tyo whateveri rowi -- all the keys in the first have to be there in the second.
     ,   Cons ki tyi whateveri rowi
     ,   Lacks ko whatevero
     ) => TypeConverterRowList (Cons ki tyi taili) rowi (Cons ko tyo tailo) rowo where
@@ -50,18 +50,21 @@ instance rowListTypeConverter :: (
 
             olp = RLProxy :: RLProxy tailo
             
-            subseto = extract ilp reci olp
-            reco = build (insert keyp value) subseto
+            subseto = extract ilp reci olp --  {}
+            reco = build (insert keyp value) subseto -- {a : }
 
 bar :: {a :: Boolean, b :: Int}
 bar = {a: true, b: 0}
 
 someFunction 
 	:: TypeConverter 
-			(a :: Boolean, b :: Int) 
+			(a :: Boolean, b:: Int) 
 			(a :: Boolean)
 	=> Record (a :: Boolean)
 someFunction = to bar
+
+-- getSubset :: forall x. IsTypeSubset x y => y -> x
+-- getSubset y = unsafeCoerce unit
 
 -- this code will generate the subset of the given type
 main :: Effect Unit
